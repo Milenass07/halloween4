@@ -1,0 +1,147 @@
+/* Estilo global */
+body, html {
+    font-family: 'Bleeding_Cowboys', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+}
+
+@font-face {
+    font-family: 'bleeding_cowboys';
+    src: url('AnyConv.com__Bleeding_Cowboys.woff2') format('woff2'),
+         url('AnyConv.com__Bleeding_Cowboys.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Tela inicial */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #350000;
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #000000;
+    color: #350000;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0a0000;
+}
+
+/* Tela de seleção de nível */
+#level-select-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #350000;
+}
+
+.level-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    background-color: #000;
+    color: #350000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.level-button:hover {
+    background-color: #0a0000;
+}
+
+/* Canvas do Jogo */
+#gameCanvas {
+    display: none;
+    width: 100vw;  /* 100% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    background-color: #4e1616;
+}
+
+/* Tela da História */
+#story-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #3f0101;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+}
+
+#story-text {
+    font-size: 24px;
+    color: #3f0101;
+}
+
+#continue-text {
+    font-size: 18px;
+    color: #2c2626;
+    margin-top: 20px;
+}
+
+/* Controles Mobile */
+#mobile-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100; /* Fica acima do jogo */
+}
+
+#mobile-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0a0000;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#mobile-controls button:active {
+    opacity: 1;
+}
+
+#orientation-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 200; /* Garante que a mensagem fique acima de todos os elementos */
+    font-size: 24px;
+    padding: 20px;
+    box-sizing: border-box;
+}

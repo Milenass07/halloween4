@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Almas Imortais: O Retorno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela de Início -->
+    <div id="start-screen">
+        <h1>Almas Imortais: O Retorno</h1>
+        <button id="play-button">Jogar</button>
+        <button id="new-game-button">Novo Jogo</button>
+        <button id="shop-button">Loja</button>
+    </div>
+
+    <!-- Tela da História -->
+    <div id="story-screen" style="display:none;">
+        <p id="story-text"></p>
+        <p id="continue-text" style="color: gray; display: none;">(Aperte espaço para continuar)</p>
+    </div>
+
+    <!-- Tela de Seleção de Nível -->
+    <div id="level-select-screen" style="display:none;">
+        <h2>Selecione o Nível</h2>
+        <button class="level-button" data-level="1">Nível 1</button>
+    </div>
+
+    <!-- Canvas do Jogo -->
+    <canvas id="gameCanvas" style="display:none;"></canvas>
+
+    <!-- Controles Mobile -->
+    <div id="mobile-controls" style="display: none;">
+        <button id="up">↑</button>
+        <button id="left">←</button>
+        <button id="right">→</button>
+        <button id="down">↓</button>
+        <button id="action-e">E</button>
+        <button id="action-f">F</button>
+    </div>
+
+    <div id="orientation-warning" style="display: none;">
+        <h2>Por favor, vire seu dispositivo na horizontal para jogar!</h2>
+    </div>
+    
+    <!-- Áudio -->
+    <audio id="musicas3" src="musica3.mp3" loop></audio>
+    <audio id="audio" src="audio1.mp3" loop></audio>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
